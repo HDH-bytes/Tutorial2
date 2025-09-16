@@ -9,27 +9,27 @@
 */
 
 // AND short-circuit
-let a; //set to true
-let b; //set to false
-let c = a && console.log("This will NOT print"); // returns false
-let d = b && console.log("This will print"); // returns undefined
+let a = true; //set to true
+let b = false; //set to false
+let c = !(a) && console.log("This will NOT print"); // returns false
+let d = undefined && console.log("This will print"); // returns undefined
 
 // OR short-circuit
-let f; //set to true
-let g; //set to false
+let f = true; //set to true
+let g = false; //set to false
 let h = true || console.log("This will NOT print"); // returns true
-let i = false || console.log("This will print"); // returns undefined
+let i = undefined || console.log("This will print"); // returns undefined
 
 //set t so that v contains "hello"
 //do not use true or false
-let t; 
+let t = "val"; 
 let u = "hello"; 
 let v = t && u;      
 
 //set x and y so that z contains 0
 //do not use true or false
-let x; 
-let y; 
+let x = 1 - 1; 
+let y = 0; 
 let z = x || y;    
 
 console.log(c); // false
